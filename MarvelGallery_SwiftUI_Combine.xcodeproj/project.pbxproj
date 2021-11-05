@@ -15,6 +15,7 @@
 		799EB8242735779A0010DF09 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 799EB8232735779A0010DF09 /* Constants.swift */; };
 		799EB826273578560010DF09 /* GalleryScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 799EB825273578560010DF09 /* GalleryScreen.swift */; };
 		799EB82927357B8E0010DF09 /* CharacterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 799EB82827357B8E0010DF09 /* CharacterCell.swift */; };
+		799EB82B27357FFB0010DF09 /* GalleryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 799EB82A27357FFB0010DF09 /* GalleryViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		799EB8232735779A0010DF09 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		799EB825273578560010DF09 /* GalleryScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryScreen.swift; sourceTree = "<group>"; };
 		799EB82827357B8E0010DF09 /* CharacterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterCell.swift; sourceTree = "<group>"; };
+		799EB82A27357FFB0010DF09 /* GalleryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 			isa = PBXGroup;
 			children = (
 				799EB827273579EF0010DF09 /* Gallery */,
+				799EB82A27357FFB0010DF09 /* GalleryViewModel.swift */,
 			);
 			path = Flows;
 			sourceTree = "<group>";
@@ -208,6 +211,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				799EB826273578560010DF09 /* GalleryScreen.swift in Sources */,
+				799EB82B27357FFB0010DF09 /* GalleryViewModel.swift in Sources */,
 				799EB8242735779A0010DF09 /* Constants.swift in Sources */,
 				799EB8212735776F0010DF09 /* GalleryService.swift in Sources */,
 				799EB82927357B8E0010DF09 /* CharacterCell.swift in Sources */,
