@@ -11,7 +11,7 @@ import SwiftUI
 struct MarvelGallery_SwiftUI_CombineApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            GalleryScreen()
         }
     }
 }
