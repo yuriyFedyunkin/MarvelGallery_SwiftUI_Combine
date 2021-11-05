@@ -9,12 +9,21 @@ import SwiftUI
 
 struct GalleryScreen: View {
     
+    private var layout: [GridItem] {
+        [GridItem(.adaptive(minimum: appearance.itemSize),
+                  spacing: appearance.spacing)]
+    }
     private let appearance = Appearance()
     
     var body: some View {
         NavigationView {
             ScrollView {
-                EmptyView()
+                LazyVGrid(columns: layout, spacing: appearance.spacing) {
+                    ForEach(0 ..< 10) { _ in
+                        CharacterCell(imageUrl: nil)
+                            .frame(width: appearance.itemSize, height: appearance.itemSize)
+                    }
+                }
             }
         }
         .navigationBarTitleDisplayMode(.inline)
@@ -34,8 +43,6 @@ extension GalleryScreen {
 
 struct GalleryScreen_Previews: PreviewProvider {
     static var previews: some View {
-        NavigationView{
             GalleryScreen()
-        }
     }
 }
