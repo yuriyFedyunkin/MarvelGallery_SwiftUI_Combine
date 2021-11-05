@@ -13,7 +13,6 @@ final class GalleryViewModel: ObservableObject {
     @Published var characters: [CharacterModel] = []
     private var cancellable = Set<AnyCancellable>()
     
-    
     init(service: GalleryService = GalleryServiceImpl()) {
         service.fetchGallery()
             .receive(on: DispatchQueue.main)

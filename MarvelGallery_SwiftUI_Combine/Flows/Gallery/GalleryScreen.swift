@@ -9,25 +9,31 @@ import SwiftUI
 
 struct GalleryScreen: View {
     
+    @ObservedObject private var viewModel: GalleryViewModel
+    
+    private let appearance = Appearance()
     private var layout: [GridItem] {
         [GridItem(.adaptive(minimum: appearance.itemSize),
                   spacing: appearance.spacing)]
     }
-    private let appearance = Appearance()
+    
+    init(viewModel: GalleryViewModel = GalleryViewModel()) {
+        self.viewModel = viewModel
+    }
     
     var body: some View {
         NavigationView {
             ScrollView {
                 LazyVGrid(columns: layout, spacing: appearance.spacing) {
-                    ForEach(0 ..< 10) { _ in
-                        CharacterCell(imageUrl: nil)
+                    ForEach(viewModel.characters, id: \.id) { character in
+                        CharacterCell(imageUrl: character.imageUrl)
                             .frame(width: appearance.itemSize, height: appearance.itemSize)
                     }
                 }
             }
+            .navigationBarTitleDisplayMode(.inline)
+            .navigationBarItems(leading: Image(Constants.logo))
         }
-        .navigationBarTitleDisplayMode(.inline)
-        .navigationBarItems(leading: Image(Constants.logo))
     }
 }
 
