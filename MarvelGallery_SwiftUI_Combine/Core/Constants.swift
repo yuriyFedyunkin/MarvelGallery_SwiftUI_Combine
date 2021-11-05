@@ -9,4 +9,5 @@ import Foundation
 
 enum Constants {
     static let apiURL: String = "https://static.upstarts.work/tests/marvelgram/klsZdDg50j2.json"
+    static let logo = "logo"
 }
