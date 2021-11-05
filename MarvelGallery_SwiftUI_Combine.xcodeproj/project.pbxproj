@@ -11,6 +11,7 @@
 		799EB80D273570F60010DF09 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 799EB80C273570F60010DF09 /* ContentView.swift */; };
 		799EB80F273570F80010DF09 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 799EB80E273570F80010DF09 /* Assets.xcassets */; };
 		799EB812273570F80010DF09 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 799EB811273570F80010DF09 /* Preview Assets.xcassets */; };
+		799EB81B273575510010DF09 /* CharacterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 799EB81A273575510010DF09 /* CharacterModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +21,7 @@
 		799EB80E273570F80010DF09 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		799EB811273570F80010DF09 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		799EB8182735723D0010DF09 /* MarvelGallery-SwiftUI-Combine-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "MarvelGallery-SwiftUI-Combine-Info.plist"; sourceTree = SOURCE_ROOT; };
+		799EB81A273575510010DF09 /* CharacterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 			children = (
 				799EB8182735723D0010DF09 /* MarvelGallery-SwiftUI-Combine-Info.plist */,
 				799EB80A273570F60010DF09 /* MarvelGallery_SwiftUI_CombineApp.swift */,
+				799EB8192735753A0010DF09 /* Models */,
 				799EB80C273570F60010DF09 /* ContentView.swift */,
 				799EB80E273570F80010DF09 /* Assets.xcassets */,
 				799EB810273570F80010DF09 /* Preview Content */,
@@ -67,6 +70,14 @@
 				799EB811273570F80010DF09 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		799EB8192735753A0010DF09 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				799EB81A273575510010DF09 /* CharacterModel.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,6 +150,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				799EB81B273575510010DF09 /* CharacterModel.swift in Sources */,
 				799EB80D273570F60010DF09 /* ContentView.swift in Sources */,
 				799EB80B273570F60010DF09 /* MarvelGallery_SwiftUI_CombineApp.swift in Sources */,
 			);
