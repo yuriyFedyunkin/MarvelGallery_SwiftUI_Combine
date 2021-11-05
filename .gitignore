@@ -47,6 +47,8 @@ playground.xcworkspace
 # .swiftpm
 
 .build/
+.DS_Store
+MarvelGallery_SwiftUI_Combine.xcworkspace/xcuserdata/yuriyfedyunkin.xcuserdatad/UserInterfaceState.xcuserstate
 
 # CocoaPods
 #
