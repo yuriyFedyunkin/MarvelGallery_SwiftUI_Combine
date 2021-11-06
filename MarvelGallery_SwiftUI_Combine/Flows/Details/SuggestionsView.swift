@@ -72,6 +72,9 @@ extension SuggestionsView {
 
 struct SuggestionsView_Previews: PreviewProvider {
     static var previews: some View {
-        SuggestionsView(suggestions: [])
+        SuggestionsView(
+            suggestions: [CharacterModel](
+                repeating: dev.character,
+                count: 10))
     }
 }
