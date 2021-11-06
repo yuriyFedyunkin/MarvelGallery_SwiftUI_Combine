@@ -53,6 +53,7 @@ struct DetailsScreen: View {
             }
         }
         .navigationTitle(character.name)
+        .modifier(BackButtonModifier())
     }
 }
 
