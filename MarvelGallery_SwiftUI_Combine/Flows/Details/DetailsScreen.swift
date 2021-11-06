@@ -7,7 +7,23 @@
 
 import SwiftUI
 
+// MARK: Additional view for lazy navigation logic
+struct DetailsLoadingView: View {
+    
+    @Binding var character: CharacterModel?
+    
+    var body: some View {
+        ZStack {
+            if let character = character {
+                DetailsScreen(character: character)
+            }
+        }
+    }
+}
+
 struct DetailsScreen: View {
+    
+    @EnvironmentObject private var viewModel: GalleryViewModel
     
     let character: CharacterModel
     private let appearance = Appearance()
@@ -25,9 +41,10 @@ struct DetailsScreen: View {
                     .font(appearance.font)
                     .padding()
                 
-                SuggestionsView()
+                SuggestionsView(suggestions: viewModel.getSuggetions(for: character))
             }
         }
+        .navigationTitle(character.name)
     }
 }
 

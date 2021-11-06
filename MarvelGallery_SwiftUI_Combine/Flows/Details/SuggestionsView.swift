@@ -9,6 +9,7 @@ import SwiftUI
 
 struct SuggestionsView: View {
     
+    let suggestions: [CharacterModel]
     private let appearance = Appearance()
     
     var body: some View {
@@ -20,11 +21,11 @@ struct SuggestionsView: View {
             
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack(spacing: appearance.spacing) {
-                    ForEach(0 ..< 10) { _ in
-                        CharacterCell(imageUrl: nil)
+                    ForEach(suggestions, id: \.id) { character in
+                        CharacterCell(imageUrl: character.imageUrl)
                             .frame(width: appearance.imageWidth,
                                    height: appearance.imageWidth)
-                            .background(.white)
+                            .background(.black)
                     }
                 }
                 .padding(.horizontal)
@@ -43,6 +44,6 @@ extension SuggestionsView {
 
 struct SuggestionsView_Previews: PreviewProvider {
     static var previews: some View {
-        SuggestionsView()
+        SuggestionsView(suggestions: [])
     }
 }

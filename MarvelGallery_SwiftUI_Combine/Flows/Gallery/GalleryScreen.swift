@@ -10,6 +10,7 @@ import SwiftUI
 struct GalleryScreen: View {
     
     @ObservedObject private var viewModel: GalleryViewModel
+    @State private var showDetails: Bool = false
     
     private let appearance = Appearance()
     private var layout: [GridItem] {
@@ -28,12 +29,28 @@ struct GalleryScreen: View {
                     ForEach(viewModel.characters, id: \.id) { character in
                         CharacterCell(imageUrl: character.imageUrl)
                             .frame(width: appearance.itemSize, height: appearance.itemSize)
+                            .background(.black)
+                            .onTapGesture {
+                                segue(character: character)
+                            }
                     }
                 }
             }
             .navigationBarTitleDisplayMode(.inline)
             .navigationBarItems(leading: Image(Constants.logo))
+            .background(
+                NavigationLink(
+                    destination: DetailsLoadingView(character: $viewModel.selectedCharacter),
+                    isActive: $showDetails,
+                    label: { EmptyView() })
+            )
         }
+        .environmentObject(viewModel)
+    }
+    
+    private func segue(character: CharacterModel) {
+        viewModel.selectedCharacter = character
+        showDetails.toggle()
     }
 }
 
