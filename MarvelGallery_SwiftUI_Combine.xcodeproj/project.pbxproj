@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7913767C2736F03E00305181 /* GaugeProgressStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7913767B2736F03E00305181 /* GaugeProgressStyle.swift */; };
 		799EB80B273570F60010DF09 /* MarvelGallery_SwiftUI_CombineApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 799EB80A273570F60010DF09 /* MarvelGallery_SwiftUI_CombineApp.swift */; };
 		799EB80F273570F80010DF09 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 799EB80E273570F80010DF09 /* Assets.xcassets */; };
 		799EB812273570F80010DF09 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 799EB811273570F80010DF09 /* Preview Assets.xcassets */; };
@@ -20,9 +21,12 @@
 		799EB83227368E8F0010DF09 /* SuggestionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 799EB83127368E8F0010DF09 /* SuggestionsView.swift */; };
 		799EB8352736964F0010DF09 /* PreviewProvider+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 799EB8342736964F0010DF09 /* PreviewProvider+Extension.swift */; };
 		799EB8372736E3DC0010DF09 /* BackButtonModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 799EB8362736E3DB0010DF09 /* BackButtonModifier.swift */; };
+		F021BEDF0E2606C34DE977F7 /* Pods_MarvelGallery_SwiftUI_Combine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BE3C588AE95F1ABDD5AF55C /* Pods_MarvelGallery_SwiftUI_Combine.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		21B6130EE793BD21DE036B80 /* Pods-MarvelGallery_SwiftUI_Combine.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MarvelGallery_SwiftUI_Combine.release.xcconfig"; path = "Target Support Files/Pods-MarvelGallery_SwiftUI_Combine/Pods-MarvelGallery_SwiftUI_Combine.release.xcconfig"; sourceTree = "<group>"; };
+		7913767B2736F03E00305181 /* GaugeProgressStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GaugeProgressStyle.swift; sourceTree = "<group>"; };
 		799EB807273570F60010DF09 /* MarvelGallery_SwiftUI_Combine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MarvelGallery_SwiftUI_Combine.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		799EB80A273570F60010DF09 /* MarvelGallery_SwiftUI_CombineApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelGallery_SwiftUI_CombineApp.swift; sourceTree = "<group>"; };
 		799EB80E273570F80010DF09 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -38,6 +42,8 @@
 		799EB83127368E8F0010DF09 /* SuggestionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionsView.swift; sourceTree = "<group>"; };
 		799EB8342736964F0010DF09 /* PreviewProvider+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PreviewProvider+Extension.swift"; sourceTree = "<group>"; };
 		799EB8362736E3DB0010DF09 /* BackButtonModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackButtonModifier.swift; sourceTree = "<group>"; };
+		82E48E16ED9D0A194696037F /* Pods-MarvelGallery_SwiftUI_Combine.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MarvelGallery_SwiftUI_Combine.debug.xcconfig"; path = "Target Support Files/Pods-MarvelGallery_SwiftUI_Combine/Pods-MarvelGallery_SwiftUI_Combine.debug.xcconfig"; sourceTree = "<group>"; };
+		8BE3C588AE95F1ABDD5AF55C /* Pods_MarvelGallery_SwiftUI_Combine.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MarvelGallery_SwiftUI_Combine.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,17 +51,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F021BEDF0E2606C34DE977F7 /* Pods_MarvelGallery_SwiftUI_Combine.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		646359C49D167115466DBF31 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8BE3C588AE95F1ABDD5AF55C /* Pods_MarvelGallery_SwiftUI_Combine.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		799EB7FE273570F50010DF09 = {
 			isa = PBXGroup;
 			children = (
 				799EB809273570F60010DF09 /* MarvelGallery_SwiftUI_Combine */,
 				799EB808273570F60010DF09 /* Products */,
+				B68554AE9B691A08996A2E7C /* Pods */,
+				646359C49D167115466DBF31 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -172,8 +189,18 @@
 			children = (
 				799EB82827357B8E0010DF09 /* CharacterCell.swift */,
 				799EB8362736E3DB0010DF09 /* BackButtonModifier.swift */,
+				7913767B2736F03E00305181 /* GaugeProgressStyle.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		B68554AE9B691A08996A2E7C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				82E48E16ED9D0A194696037F /* Pods-MarvelGallery_SwiftUI_Combine.debug.xcconfig */,
+				21B6130EE793BD21DE036B80 /* Pods-MarvelGallery_SwiftUI_Combine.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -183,9 +210,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 799EB815273570F80010DF09 /* Build configuration list for PBXNativeTarget "MarvelGallery_SwiftUI_Combine" */;
 			buildPhases = (
+				94AB55C7ABB2C530BE359731 /* [CP] Check Pods Manifest.lock */,
 				799EB803273570F60010DF09 /* Sources */,
 				799EB804273570F60010DF09 /* Frameworks */,
 				799EB805273570F60010DF09 /* Resources */,
+				D27E8DB1D9DF8CA59B445FA5 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -241,6 +270,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		94AB55C7ABB2C530BE359731 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MarvelGallery_SwiftUI_Combine-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D27E8DB1D9DF8CA59B445FA5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MarvelGallery_SwiftUI_Combine/Pods-MarvelGallery_SwiftUI_Combine-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MarvelGallery_SwiftUI_Combine/Pods-MarvelGallery_SwiftUI_Combine-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MarvelGallery_SwiftUI_Combine/Pods-MarvelGallery_SwiftUI_Combine-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		799EB803273570F60010DF09 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -252,6 +323,7 @@
 				799EB826273578560010DF09 /* GalleryScreen.swift in Sources */,
 				799EB82B27357FFB0010DF09 /* GalleryViewModel.swift in Sources */,
 				799EB8242735779A0010DF09 /* Constants.swift in Sources */,
+				7913767C2736F03E00305181 /* GaugeProgressStyle.swift in Sources */,
 				799EB8212735776F0010DF09 /* GalleryService.swift in Sources */,
 				799EB82E273585100010DF09 /* DetailsScreen.swift in Sources */,
 				799EB82927357B8E0010DF09 /* CharacterCell.swift in Sources */,
@@ -381,6 +453,7 @@
 		};
 		799EB816273570F80010DF09 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 82E48E16ED9D0A194696037F /* Pods-MarvelGallery_SwiftUI_Combine.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -413,6 +486,7 @@
 		};
 		799EB817273570F80010DF09 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 21B6130EE793BD21DE036B80 /* Pods-MarvelGallery_SwiftUI_Combine.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
