@@ -28,7 +28,7 @@ struct BackButtonModifier: ViewModifier {
                 DragGesture()
                     .updating($dragOffset, body: { (value, state, transaction) in
                         if(value.startLocation.x < 20 && value.translation.width > 100) {
-                            self.mode.wrappedValue.dismiss()
+                            mode.wrappedValue.dismiss()
                         }
                     })
             )
