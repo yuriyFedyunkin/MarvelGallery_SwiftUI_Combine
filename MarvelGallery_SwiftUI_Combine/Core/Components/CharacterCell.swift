@@ -22,7 +22,8 @@ struct CharacterCell: View {
 
 struct CharacterCell_Previews: PreviewProvider {
     static var previews: some View {
-        CharacterCell(imageUrl: nil)
+        CharacterCell(imageUrl: dev.character.imageUrl)
+            .frame(width: 300, height: 300)
             .previewLayout(.fixed(width: 300, height: 300))
     }
 }

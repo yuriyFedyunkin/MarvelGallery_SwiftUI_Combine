@@ -9,7 +9,15 @@ import SwiftUI
 
 struct SuggestionsView: View {
     
+    @State private var showSelected: Bool = false
+    @State private var selectedCharacter: CharacterModel?
+    
+    private let suggestions: [CharacterModel]
     private let appearance = Appearance()
+    
+    init(suggestions: [CharacterModel]) {
+        self.suggestions = suggestions
+    }
     
     var body: some View {
         VStack(alignment: .leading) {
@@ -18,16 +26,37 @@ struct SuggestionsView: View {
                 .bold()
                 .padding([.horizontal, .bottom])
             
-            ScrollView(.horizontal, showsIndicators: false) {
-                HStack(spacing: appearance.spacing) {
-                    ForEach(0 ..< 10) { _ in
-                        CharacterCell(imageUrl: nil)
-                            .frame(width: appearance.imageWidth,
-                                   height: appearance.imageWidth)
-                            .background(.white)
-                    }
-                }
+            suggestionsView
                 .padding(.horizontal)
+                .background(
+                    NavigationLink(
+                        destination: DetailsLoadingView(character: selectedCharacter),
+                        isActive: $showSelected,
+                        label: { EmptyView() })
+                )
+        }
+    }
+    
+    private func segue(character: CharacterModel) {
+        selectedCharacter = character
+        showSelected.toggle()
+    }
+}
+
+extension SuggestionsView {
+    
+    private var suggestionsView: some View {
+        ScrollView(.horizontal, showsIndicators: false) {
+            HStack(spacing: appearance.spacing) {
+                ForEach(suggestions, id: \.id) { character in
+                    CharacterCell(imageUrl: character.imageUrl)
+                        .frame(width: appearance.imageWidth,
+                               height: appearance.imageWidth)
+                        .background(.black)
+                        .onTapGesture {
+                            segue(character: character)
+                        }
+                }
             }
         }
     }
@@ -43,6 +72,9 @@ extension SuggestionsView {
 
 struct SuggestionsView_Previews: PreviewProvider {
     static var previews: some View {
-        SuggestionsView()
+        SuggestionsView(
+            suggestions: [CharacterModel](
+                repeating: dev.character,
+                count: 10))
     }
 }
