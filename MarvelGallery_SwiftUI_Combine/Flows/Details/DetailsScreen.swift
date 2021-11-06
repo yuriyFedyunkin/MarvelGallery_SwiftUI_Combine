@@ -10,23 +10,34 @@ import SwiftUI
 struct DetailsScreen: View {
     
     let character: CharacterModel
+    private let appearance = Appearance()
     
     var body: some View {
         ScrollView {
-        VStack {
-            CharacterCell(imageUrl: character.imageUrl)
-                .frame(width: UIScreen.main.bounds.width,
-                       height: UIScreen.main.bounds.width)
-            
-            Text(character.description)
-                .kerning(-0.41)
-                .lineSpacing(4)
-                .font(.system(size: 14, weight: .regular))
-                .padding()
-            
-            SuggestionsView()
+            VStack {
+                CharacterCell(imageUrl: character.imageUrl)
+                    .frame(width: appearance.imageWidth,
+                           height: appearance.imageWidth)
+                
+                Text(character.description)
+                    .kerning(appearance.kerning)
+                    .lineSpacing(appearance.lineSpacing)
+                    .font(appearance.font)
+                    .padding()
+                
+                SuggestionsView()
+            }
         }
     }
+}
+
+extension DetailsScreen {
+    
+    struct Appearance {
+        let font = Font.system(size: 14, weight: .regular)
+        let lineSpacing: CGFloat = 4
+        let kerning: CGFloat = -0.41
+        let imageWidth = UIScreen.main.bounds.width
     }
 }
 
