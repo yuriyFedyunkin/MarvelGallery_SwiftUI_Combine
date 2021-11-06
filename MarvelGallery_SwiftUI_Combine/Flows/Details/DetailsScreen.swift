@@ -10,7 +10,11 @@ import SwiftUI
 // MARK: Additional view for lazy navigation logic
 struct DetailsLoadingView: View {
     
-    @Binding var character: CharacterModel?
+    private var character: CharacterModel?
+    
+    init(character: CharacterModel?) {
+        self.character = character
+    }
     
     var body: some View {
         ZStack {
@@ -25,8 +29,12 @@ struct DetailsScreen: View {
     
     @EnvironmentObject private var viewModel: GalleryViewModel
     
-    let character: CharacterModel
+    private let character: CharacterModel
     private let appearance = Appearance()
+    
+    init(character: CharacterModel) {
+        self.character = character
+    }
     
     var body: some View {
         ScrollView {

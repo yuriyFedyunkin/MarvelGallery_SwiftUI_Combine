@@ -40,7 +40,7 @@ struct GalleryScreen: View {
             .navigationBarItems(leading: Image(Constants.logo))
             .background(
                 NavigationLink(
-                    destination: DetailsLoadingView(character: $viewModel.selectedCharacter),
+                    destination: DetailsLoadingView(character: viewModel.selectedCharacter),
                     isActive: $showDetails,
                     label: { EmptyView() })
             )
