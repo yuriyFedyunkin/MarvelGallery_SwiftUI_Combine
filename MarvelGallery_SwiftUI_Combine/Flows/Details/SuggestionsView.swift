@@ -52,7 +52,7 @@ extension SuggestionsView {
                     CharacterCell(imageUrl: character.imageUrl)
                         .frame(width: appearance.imageWidth,
                                height: appearance.imageWidth)
-                        .background(.black)
+                        .background(Color.black)
                         .onTapGesture {
                             segue(character: character)
                         }

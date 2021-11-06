@@ -29,7 +29,7 @@ struct GalleryScreen: View {
                     ForEach(viewModel.characters, id: \.id) { character in
                         CharacterCell(imageUrl: character.imageUrl)
                             .frame(width: appearance.itemSize, height: appearance.itemSize)
-                            .background(.black)
+                            .background(Color.black)
                             .onTapGesture {
                                 segue(character: character)
                             }
