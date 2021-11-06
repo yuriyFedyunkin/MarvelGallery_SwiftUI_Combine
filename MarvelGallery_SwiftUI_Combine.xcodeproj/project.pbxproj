@@ -16,6 +16,9 @@
 		799EB826273578560010DF09 /* GalleryScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 799EB825273578560010DF09 /* GalleryScreen.swift */; };
 		799EB82927357B8E0010DF09 /* CharacterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 799EB82827357B8E0010DF09 /* CharacterCell.swift */; };
 		799EB82B27357FFB0010DF09 /* GalleryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 799EB82A27357FFB0010DF09 /* GalleryViewModel.swift */; };
+		799EB82E273585100010DF09 /* DetailsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 799EB82D273585100010DF09 /* DetailsScreen.swift */; };
+		799EB83227368E8F0010DF09 /* SuggestionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 799EB83127368E8F0010DF09 /* SuggestionsView.swift */; };
+		799EB8352736964F0010DF09 /* PreviewProvider+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 799EB8342736964F0010DF09 /* PreviewProvider+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +33,9 @@
 		799EB825273578560010DF09 /* GalleryScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryScreen.swift; sourceTree = "<group>"; };
 		799EB82827357B8E0010DF09 /* CharacterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterCell.swift; sourceTree = "<group>"; };
 		799EB82A27357FFB0010DF09 /* GalleryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryViewModel.swift; sourceTree = "<group>"; };
+		799EB82D273585100010DF09 /* DetailsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsScreen.swift; sourceTree = "<group>"; };
+		799EB83127368E8F0010DF09 /* SuggestionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionsView.swift; sourceTree = "<group>"; };
+		799EB8342736964F0010DF09 /* PreviewProvider+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PreviewProvider+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +72,7 @@
 				799EB81D273576230010DF09 /* Flows */,
 				799EB8192735753A0010DF09 /* Models */,
 				799EB81C273576170010DF09 /* Services */,
+				799EB833273696320010DF09 /* Extensions */,
 				799EB8222735778A0010DF09 /* Core */,
 				799EB81F2735764B0010DF09 /* Resources */,
 				799EB810273570F80010DF09 /* Preview Content */,
@@ -101,6 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				799EB827273579EF0010DF09 /* Gallery */,
+				799EB82C273584F70010DF09 /* Details */,
 				799EB82A27357FFB0010DF09 /* GalleryViewModel.swift */,
 			);
 			path = Flows;
@@ -138,6 +146,23 @@
 				799EB82827357B8E0010DF09 /* CharacterCell.swift */,
 			);
 			path = Gallery;
+			sourceTree = "<group>";
+		};
+		799EB82C273584F70010DF09 /* Details */ = {
+			isa = PBXGroup;
+			children = (
+				799EB82D273585100010DF09 /* DetailsScreen.swift */,
+				799EB83127368E8F0010DF09 /* SuggestionsView.swift */,
+			);
+			path = Details;
+			sourceTree = "<group>";
+		};
+		799EB833273696320010DF09 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				799EB8342736964F0010DF09 /* PreviewProvider+Extension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -210,10 +235,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				799EB83227368E8F0010DF09 /* SuggestionsView.swift in Sources */,
+				799EB8352736964F0010DF09 /* PreviewProvider+Extension.swift in Sources */,
 				799EB826273578560010DF09 /* GalleryScreen.swift in Sources */,
 				799EB82B27357FFB0010DF09 /* GalleryViewModel.swift in Sources */,
 				799EB8242735779A0010DF09 /* Constants.swift in Sources */,
 				799EB8212735776F0010DF09 /* GalleryService.swift in Sources */,
+				799EB82E273585100010DF09 /* DetailsScreen.swift in Sources */,
 				799EB82927357B8E0010DF09 /* CharacterCell.swift in Sources */,
 				799EB81B273575510010DF09 /* CharacterModel.swift in Sources */,
 				799EB80B273570F60010DF09 /* MarvelGallery_SwiftUI_CombineApp.swift in Sources */,
